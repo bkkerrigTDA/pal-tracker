@@ -63,6 +63,7 @@ public class TimeEntryControllerTest {
         assertThat(response.getBody()).isEqualTo(expected);
     }
 
+
     @Test
     public void testRead_NotFound() {
         long nonExistentTimeEntryId = 1L;
@@ -116,6 +117,7 @@ public class TimeEntryControllerTest {
         ResponseEntity response = controller.update(nonExistentTimeEntryId, new TimeEntry());
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.NOT_FOUND);
     }
+
 
     @Test
     public void testDelete() {

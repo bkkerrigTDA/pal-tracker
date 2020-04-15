@@ -1,8 +1,5 @@
 package io.pivotal.pal.tracker;
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -37,10 +34,9 @@ public class InMemoryTimeEntryRepository implements TimeEntryRepository {
     }
 
     @Override
-    public TimeEntry delete(long id) {
+    public void delete(long id) {
         TimeEntry x = find(id);
         hashMap.remove(id);
-        return x;
     }
 
     @Override

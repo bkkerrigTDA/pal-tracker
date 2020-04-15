@@ -8,7 +8,7 @@ public interface TimeEntryRepository {
 
     public TimeEntry update(long id, TimeEntry t);
 
-    public TimeEntry delete(long id);
+    public void delete(long id);
 
     public TimeEntry find(long id);
 

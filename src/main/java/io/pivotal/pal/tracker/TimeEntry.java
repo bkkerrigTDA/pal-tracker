@@ -37,6 +37,22 @@ public class TimeEntry {
         return this.id;
     }
 
+    public int getHours() {
+        return hours;
+    }
+
+    public long getProjectId() {
+        return projectId;
+    }
+
+    public long getUserId() {
+        return userId;
+    }
+
+    public LocalDate getDate() {
+        return date;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
